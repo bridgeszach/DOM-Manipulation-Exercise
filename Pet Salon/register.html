@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Pet Salon</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>The Fashion Pet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <br>
+    <main class="register">
+        <div class="input-pet">
+            <div class="square">
+                <form action="#">
+                    <p>
+                        <label for="name">Pet's Name:</label>
+                        <input class="field" id="txtName" type="text">
+                    </p>
+
+                    <p>
+                        <label for="age">Age:</label>
+                        <input class="field" type="number" name="age" id="txtAge">
+                    </p>
+
+                    <p>
+                        <label for="gender">Gender: </label>
+                        <input class="field" id="txtGender" type="text">
+                    </p>
+                    <p>
+                        <label for="breed">Breed:</label>
+                        <input class="field" type="text" id="txtBreed">
+                    </p>
+
+                    <p>
+                        <label for="services">Service:</label>
+                        <select class="field" name="services" id="txtService">
+                            <option value="" disabled selected>---Select A Service---</option>
+                            <option value="Shower">Shower</option>
+                            <option value="Hair-Cut">Hair-Cut</option>
+                            <option value="Nails">Nail Trim</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="owner">Owner's Name:</label>
+                        <input class="field" type="text" id="txtOwner">
+                    </p>
+
+                    <p>
+                        <label for="phone">Owner's Phone:</label>
+                        <input class="field" type="text" id="txtPhone">
+                    </p>
+
+
+                    <input class="button" type="button" value="Register" onclick="register();">
+                    <button class="button" onclick="clear();">Clear Form</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="display">
+            <div class="search">
+                <input type="search" name="search" id="petSearch">
+                <button id="search" onclick="Search();">Search</button>
+            </div>
+            <table class="table table-dark">
+                <thead>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Breed</th>
+                    <th>Services</th>
+                    <th>Owner Name</th>
+                    <th>Owner Phone</th>
+
+                </thead>
+                <tbody id="rowPet"></tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <div class="info" id="info"></div>
+    </footer>
+
+    <script src="jQuery3-4-1.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
